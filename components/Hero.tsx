@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone, Instagram, Music2 } from "lucide-react";
 
 export default function Hero() {
   const handleScroll = (id: string) => {
@@ -13,6 +14,44 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Top contact & social bar */}
+      <div className="absolute top-16 left-0 right-0 z-20 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-wrap items-center justify-center gap-4 px-4 py-2"
+        >
+          <a
+            href="tel:09043434343"
+            className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#00d4ff] transition-colors duration-200"
+          >
+            <Phone size={14} color="#00d4ff" />
+            <span className="tracking-wide">09043434343</span>
+          </a>
+          <span className="text-[rgba(0,212,255,0.3)] hidden sm:inline">|</span>
+          <a
+            href="https://www.instagram.com/techaide_0601?igsh=MWR1YTRlMnluMjY5OQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#00d4ff] transition-colors duration-200"
+          >
+            <Instagram size={14} color="#00d4ff" />
+            <span className="tracking-wide">@techaide_0601</span>
+          </a>
+          <span className="text-[rgba(0,212,255,0.3)] hidden sm:inline">|</span>
+          <a
+            href="https://www.tiktok.com/@techaide0?_r=1&_t=ZS-94hmfypzZ22"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#00d4ff] transition-colors duration-200"
+          >
+            <Music2 size={14} color="#00d4ff" />
+            <span className="tracking-wide">@techaide0</span>
+          </a>
+        </motion.div>
+      </div>
+
       {/* Animated background */}
       <div className="absolute inset-0 grid-bg opacity-40" />
 
