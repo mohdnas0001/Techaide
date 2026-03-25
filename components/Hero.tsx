@@ -23,11 +23,11 @@ export default function Hero() {
           className="flex flex-wrap items-center justify-center gap-4 px-4 py-2"
         >
           <a
-            href="tel:09043434343"
+            href="tel:08100369402"
             className="flex items-center gap-2 text-sm text-gray-300 hover:text-[#00d4ff] transition-colors duration-200"
           >
             <Phone size={14} color="#00d4ff" />
-            <span className="tracking-wide">09043434343</span>
+            <span className="tracking-wide">08100369402</span>
           </a>
           <span className="text-[rgba(0,212,255,0.3)] hidden sm:inline">|</span>
           <a
