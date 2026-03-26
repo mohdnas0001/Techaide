@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Instagram, Music2 } from "lucide-react";
+import { MapPin, Instagram, Music2, Facebook, Landmark } from "lucide-react";
 
 const socialLinks = [
   {
@@ -16,6 +16,12 @@ const socialLinks = [
     href: "https://www.tiktok.com/@techaide0?_r=1&_t=ZS-94hmfypzZ22",
     label: "@techaide0",
   },
+  {
+    name: "Facebook",
+    icon: Facebook,
+    href: "https://web.facebook.com/profile.php?id=61578429820985",
+    label: "Techaide",
+  },
 ];
 
 export default function Contact() {
@@ -23,7 +29,7 @@ export default function Contact() {
     <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(0,212,255,0.3)] to-transparent" />
 
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +46,7 @@ export default function Contact() {
           <div className="mt-4 mx-auto w-16 h-0.5 bg-gradient-to-r from-transparent via-[#00d4ff] to-transparent" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Address card */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -138,6 +144,40 @@ export default function Contact() {
                 );
               })}
             </div>
+          </motion.div>
+
+          {/* Bank account card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="p-6 rounded-xl"
+            style={{
+              background: "rgba(17, 17, 17, 0.8)",
+              border: "1px solid rgba(0, 212, 255, 0.2)",
+              boxShadow: "0 0 20px rgba(0,212,255,0.05)",
+            }}
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                style={{
+                  background: "rgba(0, 212, 255, 0.1)",
+                  border: "1px solid rgba(0, 212, 255, 0.3)",
+                }}
+              >
+                <Landmark size={18} color="#00d4ff" />
+              </div>
+              <h3 className="text-base font-semibold font-grotesk text-white">
+                Bank Transfer
+              </h3>
+            </div>
+            <p className="text-xs text-gray-500 mb-1">First Bank</p>
+            <p className="text-lg font-bold text-[#00d4ff] tracking-widest mb-1">
+              2045101485
+            </p>
+            <p className="text-sm text-gray-300">Dabuchi Agencies</p>
           </motion.div>
         </div>
       </div>
